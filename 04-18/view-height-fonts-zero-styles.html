@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+            rel="stylesheet"
+    />
+    <style type="text/css">
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            font-family: "Arial";
+        }
+
+        body {
+            background-color: rgba(123, 22, 5, 0.6);
+            display: flex;
+            /*
+            flex-wrap, justify-content, align-items, align-content
+            */
+            height: 100vh;
+
+            flex-wrap: nowrap;
+            align-items: stretch;
+        }
+
+        #left {
+            background-color: rgba(55, 22, 11, 0.5);
+
+            font-family: "Verdana";
+        }
+
+        #right {
+            background-color: rgba(33, 111, 22, 0.4);
+            font-family: "Anton", sans-serif;
+        }
+
+        #left,
+        #right {
+            width: 50%;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    lewa kolumna
+</div>
+<div id="right">
+    prawa kolumna
+</div>
+</body>
+</html>

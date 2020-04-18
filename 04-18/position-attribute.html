@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        .container {
+            width: 300px;
+            height: 300px;
+            background-color: rgba(22, 121, 56, 0.8);
+            margin: 20px;
+            border: 1px solid black;
+
+            position: static; /* default value */
+        }
+
+        /* left, right, top, bottom */
+        .container:first-child {
+            position: relative;
+            right: 20px;
+            background-color: rgb(22, 11, 123);
+        }
+
+        .container:nth-child(2) {
+            position: absolute;
+            background-color: rgba(123, 22, 35, 0.4);
+            right: 20px;
+            top: 20px;
+        }
+
+        .item {
+            background-color: red;
+        }
+
+        .container:nth-child(3) {
+            position: relative;
+        }
+
+        .container:nth-child(3) > .item:first-child {
+            position: absolute;
+
+            top: 30px;
+            bottom: 20px;
+            right: 20px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container"></div>
+<div class="container"></div>
+<div class="container">
+    <div class="item">12312</div>
+
+    tresc tesc
+</div>
+</body>
+</html>
