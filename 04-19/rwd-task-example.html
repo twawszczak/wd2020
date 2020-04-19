@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        #menu {
+            border: 1px dotted black;
+            background-color: white;
+        }
+
+        #menu > .menu-item {
+            text-align: center;
+            padding: 5px;
+            display: block;
+        }
+
+        #menu .menu-item:hover {
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #center-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #text-container {
+            max-width: 800px;
+        }
+
+        #text-container > img {
+            width: 100%;
+        }
+
+        @media (min-width: 492px) {
+            #menu {
+                display: flex;
+                position: fixed;
+
+                top: 0;
+                left: 0;
+                right: 0;
+            }
+
+            #menu > .menu-item {
+                flex-grow: 1;
+            }
+
+            h1 {
+                padding-top: 30px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #text-container > img {
+                margin-right: 10px;
+                max-width: 100px;
+                float: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <a href="#section-1" class="menu-item">Sekcja 1</a>
+    <a href="#section-2" class="menu-item">Sekcja 2</a>
+    <a href="#section-3" class="menu-item">Sekcja 3</a>
+    <a href="#section-4" class="menu-item">Sekcja 4</a>
+    <a href="#section-5" class="menu-item">Sekcja 5</a>
+    <a href="#section-6" class="menu-item">Sekcja 6</a>
+</div>
+
+<div id="center-container">
+    <div id="text-container">
+        <h1 id="section-1">Sekcja 1</h1>
+        O znaczeniu testów na koronawirusa w kontekście walki z epidemią badacze
+        i lekarze przekonują od dawna.
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/ze-k9kpTURBXy9jZjVkNmFhZGU3ZGRjM2MzMmNjNmU0NDc3MGM3MmM3Yy5qcGeSlQMAAM0fEM0ReZMFzQLpzQGQgaEwBQ"
+        />
+        Przykładem skuteczności tego podejścia jest Islandia, gdzie wprowadzono
+        testy na dużą skalę, a także wdrożono ograniczenia i zakazy w związku z
+        epidemią. Obecnie w Islandii liczba nowych zakażeń koronawirusem i
+        aktywnych infekcji znacznie spadła w porównaniu do sytuacji z przełomu
+        marca i kwietnia.
+
+        <h1 id="section-2">Sekcja 2</h1>
+        O znaczeniu testów na koronawirusa w kontekście walki z epidemią badacze
+        i lekarze przekonują od dawna.
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/ze-k9kpTURBXy9jZjVkNmFhZGU3ZGRjM2MzMmNjNmU0NDc3MGM3MmM3Yy5qcGeSlQMAAM0fEM0ReZMFzQLpzQGQgaEwBQ"
+        />
+        Przykładem skuteczności tego podejścia jest Islandia, gdzie wprowadzono
+        testy na dużą skalę, a także wdrożono ograniczenia i zakazy w związku z
+        epidemią. Obecnie w Islandii liczba nowych zakażeń koronawirusem i
+        aktywnych infekcji znacznie spadła w porównaniu do sytuacji z przełomu
+        marca i kwietnia.
+
+        <h1 id="section-3">Sekcja 31</h1>
+        O znaczeniu testów na koronawirusa w kontekście walki z epidemią badacze
+        i lekarze przekonują od dawna.
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/ze-k9kpTURBXy9jZjVkNmFhZGU3ZGRjM2MzMmNjNmU0NDc3MGM3MmM3Yy5qcGeSlQMAAM0fEM0ReZMFzQLpzQGQgaEwBQ"
+        />
+        Przykładem skuteczności tego podejścia jest Islandia, gdzie wprowadzono
+        testy na dużą skalę, a także wdrożono ograniczenia i zakazy w związku z
+        epidemią. Obecnie w Islandii liczba nowych zakażeń koronawirusem i
+        aktywnych infekcji znacznie spadła w porównaniu do sytuacji z przełomu
+        marca i kwietnia.
+
+        <h1 id="section-4">Sekcja 4</h1>
+        O znaczeniu testów na koronawirusa w kontekście walki z epidemią badacze
+        i lekarze przekonują od dawna.
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/ze-k9kpTURBXy9jZjVkNmFhZGU3ZGRjM2MzMmNjNmU0NDc3MGM3MmM3Yy5qcGeSlQMAAM0fEM0ReZMFzQLpzQGQgaEwBQ"
+        />
+        Przykładem skuteczności tego podejścia jest Islandia, gdzie wprowadzono
+        testy na dużą skalę, a także wdrożono ograniczenia i zakazy w związku z
+        epidemią. Obecnie w Islandii liczba nowych zakażeń koronawirusem i
+        aktywnych infekcji znacznie spadła w porównaniu do sytuacji z przełomu
+        marca i kwietnia.
+
+        <h1 id="section-5">Sekcja 5</h1>
+        O znaczeniu testów na koronawirusa w kontekście walki z epidemią badacze
+        i lekarze przekonują od dawna.
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/ze-k9kpTURBXy9jZjVkNmFhZGU3ZGRjM2MzMmNjNmU0NDc3MGM3MmM3Yy5qcGeSlQMAAM0fEM0ReZMFzQLpzQGQgaEwBQ"
+        />
+        Przykładem skuteczności tego podejścia jest Islandia, gdzie wprowadzono
+        testy na dużą skalę, a także wdrożono ograniczenia i zakazy w związku z
+        epidemią. Obecnie w Islandii liczba nowych zakażeń koronawirusem i
+        aktywnych infekcji znacznie spadła w porównaniu do sytuacji z przełomu
+        marca i kwietnia.
+
+        <h1 id="section-6">Sekcja 6</h1>
+        O znaczeniu testów na koronawirusa w kontekście walki z epidemią badacze
+        i lekarze przekonują od dawna.
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/ze-k9kpTURBXy9jZjVkNmFhZGU3ZGRjM2MzMmNjNmU0NDc3MGM3MmM3Yy5qcGeSlQMAAM0fEM0ReZMFzQLpzQGQgaEwBQ"
+        />
+        Przykładem skuteczności tego podejścia jest Islandia, gdzie wprowadzono
+        testy na dużą skalę, a także wdrożono ograniczenia i zakazy w związku z
+        epidemią. Obecnie w Islandii liczba nowych zakażeń koronawirusem i
+        aktywnych infekcji znacznie spadła w porównaniu do sytuacji z przełomu
+        marca i kwietnia.
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style>
+        img {
+            width: 100%;
+        }
+
+        #columns-container {
+            display: flex;
+        }
+
+        .column {
+            min-height: 300px;
+        }
+
+        .column:nth-child(1) {
+            width: 70%;
+            background-color: rgb(22, 123, 66);
+        }
+
+        .column:nth-child(2) {
+            width: 30%;
+            background-color: rgb(111, 12, 11);
+        }
+
+        @media (max-width: 500px) {
+            .column:nth-child(2) {
+                background-color: rgb(222, 111, 3);
+            }
+
+            .column:nth-child(1),
+            .column:nth-child(2) {
+                width: 100%;
+            }
+
+            #columns-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+<img
+        src="https://ocdn.eu/pulscms-transforms/1/RkXk9kpTURBXy9lYWUwMWJkOTBhYWNjOGY4YTU1YzU2YTA1YzIxMWFkMS5qcGeTlQMAQc0D6M0CNJMFzQMUzQG8kwmmMDhmOTFmBoGhMAU/czy-grille-na-posesjach-poteguja-zagrozenie-koronawirusem-jest-spor-mieszkancow-gminy-dobre-pod-warszawa.webp"
+/>
+
+<div id="columns-container">
+    <div class="column">wawa</div>
+    <div class="column">
+        - Z samochodów na warszawskich rejestracjach wysiadają ludzie w maskach
+        i rękawiczkach, ustawiają się w kolejkach w odpowiedniej odległości i
+        spokojnie czekają. Natknąłem się natomiast na przypadki wśród ludności
+        lokalnej, w których osoba nie stosowała maski czy rękawiczek, nie
+        zachowywała odległości i witano się przez podanie ręki - relacjonuje
+        mieszkaniec stolicy, który w marcu przeniósł się z rodziną do gminy
+        Dobre. To jego odpowiedź na list innego mieszkańca tej miejscowości.
+    </div>
+</div>
+</body>
+</html>
