@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(11, 233, 223);
+
+            margin: 200px;
+        }
+
+        @keyframes simple {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1.5);
+            }
+        }
+
+        .item {
+            animation-name: simple;
+            animation-duration: 4s;
+            /*
+            none - default value,
+            forwards - po animacji pozostaje w stanie koncowym
+             */
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+<body>
+<div class="item"></div>
+</body>
+</html>

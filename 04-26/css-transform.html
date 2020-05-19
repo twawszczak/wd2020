@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(33, 166, 222);
+            border: 2px solid black;
+
+            margin: 20px;
+        }
+
+        .item:first-child {
+            transform: scale(0.5);
+        }
+
+        .item:nth-child(2) {
+            transform: translateX(230px) translateY(100px);
+        }
+
+        .item:nth-child(3) {
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+<div class="item"></div>
+
+<div class="item"></div>
+
+<div class="item">
+    tekst
+</div>
+</body>
+</html>

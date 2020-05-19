@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        #menu {
+            display: flex;
+            padding: 0;
+        }
+
+        #menu > li {
+            flex-grow: 1;
+            display: block;
+
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        #hamburger-button {
+            display: none;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(33, 111, 33, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            #menu {
+                display: none;
+            }
+
+            #hamburger-button {
+                display: block;
+            }
+
+            #menu.menu-visible {
+                display: block;
+            }
+        }
+
+        #good-answer,
+        #bad-answer {
+            padding: 10px;
+            border: 2px solid black;
+            font-size: 30px;
+        }
+
+        .correct {
+            background-color: green;
+        }
+
+        .wrong {
+            background-color: red;
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            document
+                .getElementById("hamburger-button")
+                .addEventListener("click", () => {
+                    document.getElementById("menu").classList.toggle("menu-visible");
+                });
+
+            document.getElementById("good-answer").addEventListener("click", () => {
+                document.getElementById("good-answer").classList.add("correct");
+                document.getElementById("bad-answer").classList.remove("wrong");
+            });
+
+            document.getElementById("bad-answer").addEventListener("click", () => {
+                document.getElementById("bad-answer").classList.add("wrong");
+                document.getElementById("good-answer").classList.remove("correct");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="menu-container">
+    <div id="hamburger-button"></div>
+    <ul id="menu">
+        <li>Pozycja A</li>
+        <li>Pozycja B</li>
+        <li>Pozycja C</li>
+        <li>Pozycja D</li>
+        <li>Pozycja E</li>
+    </ul>
+</div>
+
+<div id="question">
+    <h1>Question???</h1>
+    <div id="good-answer">
+        YES
+    </div>
+
+    <div id="bad-answer">
+        NO
+    </div>
+</div>
+</body>
+</html>

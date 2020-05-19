@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style type="text/css">
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(66, 86, 123);
+        }
+
+        @keyframes trip {
+            0% {
+            }
+
+            25% {
+                transform: translateX(500px) translateY(0);
+            }
+
+            50% {
+                transform: translateX(500px) translateY(500px);
+            }
+
+            75% {
+                transform: translateX(0) translateY(500px);
+            }
+
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        .item {
+            animation-name: trip;
+            animation-duration: 10s;
+
+            animation-iteration-count: infinite;
+        }
+
+        .item:nth-child(2) {
+            animation-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+<div class="item"></div>
+<div class="item"></div>
+</body>
+</html>

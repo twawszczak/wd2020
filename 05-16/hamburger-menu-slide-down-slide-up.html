@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        #menu {
+            display: flex;
+            padding: 0;
+        }
+
+        #menu > li {
+            flex-grow: 1;
+            display: block;
+
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        #hamburger-button {
+            width: 25px;
+            height: 25px;
+            background-color: rgba(33, 111, 33, 1);
+        }
+
+        #hamburger-button-container {
+            background-color: white;
+            padding: 10px;
+            display: none;
+            z-index: 1;
+            position: relative;
+        }
+
+        @media (max-width: 600px) {
+            #menu {
+                flex-direction: column;
+                margin: 0;
+            }
+
+            #hamburger-button-container {
+                display: block;
+            }
+
+            #menu > li {
+                background-color: white;
+            }
+
+            .menu-wrapper-visible {
+                animation-name: show-wrapper;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+            }
+
+            .menu-wrapper-hidden {
+                animation-name: hide-wrapper;
+                animation-duration: 3s;
+                animation-fill-mode: forwards;
+            }
+
+            #menu-wrapper {
+                overflow: hidden;
+            }
+        }
+
+        @keyframes show-wrapper {
+            0% {
+                max-height: 0;
+            }
+
+            100% {
+                max-height: 200px;
+            }
+        }
+
+        @keyframes hide-wrapper {
+            0% {
+                max-height: 200px;
+            }
+
+            100% {
+                max-height: 0;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            document
+                .getElementById("hamburger-button")
+                .addEventListener("click", () => {
+                    document
+                        .getElementById("menu-wrapper")
+                        .classList.toggle("menu-wrapper-visible");
+                    document
+                        .getElementById("menu-wrapper")
+                        .classList.toggle("menu-wrapper-hidden");
+                });
+        });
+    </script>
+</head>
+<body>
+<div id="menu-container">
+    <div id="hamburger-button-container">
+        <div id="hamburger-button"></div>
+    </div>
+    <div id="menu-wrapper" class="menu-wrapper-visible">
+        <ul id="menu">
+            <li>Pozycja A</li>
+            <li>Pozycja B</li>
+            <li>Pozycja C</li>
+            <li>Pozycja D</li>
+            <li>Pozycja E</li>
+        </ul>
+    </div>
+</div>
+
+<h1>
+    123 123 123 123
+</h1>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #header-container {
+            width: 400px;
+            height: 200px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+
+            background-color: rgb(33, 121, 255);
+        }
+
+        @keyframes variant1 {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes variant2 {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            40% {
+                transform: scale(1.5) rotate(0deg);
+            }
+
+            60% {
+                transform: scale(1) rotate(0deg);
+
+                opacity: 1;
+            }
+
+            80% {
+                transform: scale(1) rotate(0deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+            }
+        }
+
+        #header-container {
+            animation-name: variant2;
+            animation-duration: 600ms;
+        }
+    </style>
+</head>
+<body>
+<div id="header-container">
+    Welcome on my page!
+</div>
+</body>
+</html>

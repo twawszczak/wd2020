@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        body {
+            background-color: rgb(222, 56, 78);
+        }
+
+        #gallery {
+            display: flex;
+
+            flex-wrap: wrap;
+        }
+
+        #gallery .gallery-item {
+            flex-grow: 1;
+            width: 300px;
+            margin: 20px;
+            border: 10px solid black;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        #gallery .gallery-item > img {
+            margin: -5px;
+            width: calc(100% + 5px * 2);
+            filter: blur(4px) grayscale(1);
+
+            display: block;
+        }
+
+        @keyframes gallery-item-hover {
+            to {
+                filter: blur(0) grayscale(0);
+            }
+        }
+
+        #gallery .gallery-item:hover > img {
+            animation-name: gallery-item-hover;
+            animation-duration: 400ms;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+<body>
+<div id="gallery">
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+
+    <div class="gallery-item">
+        <img
+                src="https://ocdn.eu/pulscms-transforms/1/xKVk9kpTURBXy8wNGU4MDkzMTYxOWI1ZGZkY2VhOTI3YTE3ZDVlNTBiMS5qcGeSlQMAH80D6M0CMpMFzQLpzQGQgaEwBQ"
+        />
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+
+    <style type="text/css">
+        #menu {
+            display: flex;
+            padding: 0;
+        }
+
+        #menu > li {
+            flex-grow: 1;
+            display: block;
+
+            border: 1px solid black;
+            padding: 3px;
+            text-align: center;
+        }
+
+        #hamburger-button {
+            display: none;
+            width: 25px;
+            height: 25px;
+            background-color: rgba(33, 111, 33, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            #menu {
+                display: block;
+                position: absolute;
+            }
+
+            #menu > li {
+                background-color: white;
+            }
+
+            #hamburger-button {
+                display: block;
+            }
+
+            #menu.menu-visible {
+                animation-name: show-menu;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+
+            #menu.menu-hidden {
+                animation-name: hide-menu;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        @keyframes show-menu {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes hide-menu {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            document
+                .getElementById("hamburger-button")
+                .addEventListener("click", () => {
+                    document.getElementById("menu").classList.toggle("menu-visible");
+                    document.getElementById("menu").classList.toggle("menu-hidden");
+                });
+        });
+    </script>
+</head>
+<body>
+<div id="menu-container">
+    <div id="hamburger-button"></div>
+    <ul id="menu" class="menu-visible">
+        <li>Pozycja A</li>
+        <li>Pozycja B</li>
+        <li>Pozycja C</li>
+        <li>Pozycja D</li>
+        <li>Pozycja E</li>
+    </ul>
+</div>
+
+<h1>
+    123 123 123 123
+</h1>
+</body>
+</html>
